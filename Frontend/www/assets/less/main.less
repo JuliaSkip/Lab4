@@ -1,0 +1,146 @@
+@mainColor: rgb(255, 128, 0);
+
+@import "pizza/pizza-card";
+.page{
+    display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+.information{
+    background-color: rgba(0, 0, 0, 0.8);
+    gap: 15px;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.rect{
+    color: white;
+    height: 90px;
+    width: 100px;
+    text-align: center;
+    background-color:rgb(237, 133, 30) ;
+    position: fixed;
+    top: 0;
+    left: 10px;
+    z-index: 3;
+}
+#badge{
+    transform: rotate(180deg);
+    z-index: 2;
+    position: fixed;
+    top: 90px; left: 10px;
+}
+.bottomRect{
+    color: white;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    background-color:rgb(237, 133, 30) ;
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    z-index: 3;
+}
+#bottomBadge{
+    z-index: 2;
+    position: fixed;
+    bottom: 100px; left: 10px;
+}
+
+.topText{
+    color: gray;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    justify-content: space-between;
+    gap: 15px;
+    height: 40px;
+    width: 80%;
+    position: fixed;
+    top: 0;
+    left: 18%;
+    z-index: 2;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.button{
+    color: white;
+    background-color: rgb(253, 187, 65);
+    border: solid 1.5px rgb(217, 141, 0);
+    border-radius: 3px;
+    font-weight: bold;
+    height: 35px;
+    position: fixed;
+    top: 2.5px; right: 2%;
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;
+
+}
+
+.bottomText{
+    color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    justify-content: space-between;
+    gap: 15px;
+    height: 40px;
+    width: 80%;
+    position: fixed;
+    top:40px; left: 18%;
+    z-index: 2;
+}
+
+.container{
+    position: relative;
+}
+
+.caption{
+    font-weight: bold;
+    color: orange;
+}
+.caption p{
+    font-weight:lighter;
+
+}
+.icons {
+    display: grid;
+    grid-template-rows: auto auto; 
+    grid-template-columns: auto auto;
+    text-align: center; 
+}
+.btn{
+    color: white;
+    background-color: rgb(253, 187, 65);
+    border: solid 1.5px rgb(217, 141, 0);
+    font-weight: bold;
+}
+.description{
+    color: gray;
+}
+
+.buy{
+    width: 40%;
+}
+
+.headline{
+    display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+.amount {
+	background-color: rgb(252, 144, 3);
+	border-radius: 10px;
+	color: white;
+	
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+    position: relative;
+    left: 5px;
+}
