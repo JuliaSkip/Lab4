@@ -5,24 +5,45 @@
 .page{
     display: flex;
 }
-@media (max-width: 700px) {
-	.container {
-		width: 50%;
-	}
-	.buy{
-		width: 50%;
-	}
-    .information{
-        width: 50%;
-    }
-    .number{
-        display: none;
-    }
-}
+  
 .row .images{
     position: relative;
     width: 90%;
     height: 90%;
+}
+.popular::before {
+    content: attr(data-tooltip);
+    max-width: 100px;
+    background-color: rgb(0, 183, 43);
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    right: 0; top: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.new::before {
+    content: attr(data-tooltip);
+    max-width: 100px;
+    background-color: rgb(183, 40, 0);
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    right: 0; top: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
 
 //верхушка
@@ -34,7 +55,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
 }
 .topText{
     color: gray;
@@ -47,7 +68,7 @@
     left: 120px;
     height: 40px;
     width: 88%;
-    z-index: 2;
+    z-index: 3;
     border: none;
     border-bottom: 1px solid gray;
 }
@@ -78,7 +99,7 @@
     height: 40px;
     width: 88%;
     left: 120px;
-    z-index: 2;
+    z-index: 3;
 }
 
 // текст з типами
@@ -160,7 +181,9 @@
     position: fixed;
     top: 0; right: 0;
     height: 100vh;
-    background-color: rgb(238, 233, 233);
+    background-color: rgb(238, 233, 233);      
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 //заголовок
 .headline {
@@ -169,6 +192,10 @@
     grid-template-rows: auto; 
     grid-template-columns: auto auto;
     height: 80px;
+    position: fixed;
+    top: 0;
+    width: 20%;
+    z-index: 2;
 }
 .headline h4{
     position: relative;
@@ -199,7 +226,7 @@
     border-bottom: 2px solid rgb(196, 196, 196);
     padding-top: 5px;
     position: relative;
-    top: 10px;
+    top: 70px;
 }
 .mainLine h4{
     color: @mainColor;
@@ -362,4 +389,195 @@
     margin: 10px;
     text-align: center;
 }
+
+@media (max-width: 1300px) {
+	.container {
+        width: 70%;
+	}
+	.buy{
+        width: 30%;
+	}
+    .headline {
+        width: 30%;
+    }
+    .information{
+        width: 70%;
+    }
+    .topText{
+        width: 82%;
+    }
+    .button{
+        position: fixed;
+        right: 33%;
+    }
+    .conclusion{
+        width: 30%;
+    }
+    .orderButton {
+        width: 26%;
+    }
+}
+
+@media (max-width: 990px) {
+    .container {
+        width: 65%;
+	}
+	.buy{
+        width: 35%;
+	}
+    .information{
+        width: 65%;
+    }
+    .headline {
+        width: 35%;
+    }
+    .topText{
+        width: 75%;
+    }
+    .free{
+        display: none;
+    }
+    .button{
+        position: fixed;
+        right: 40%;
+    }
+    .conclusion{
+        width: 35%;
+    }
+    .orderButton {
+        width: 31%;
+    }
+    .types{
+        width: 90%;
+        position: relative;
+        left: 5%;
+    }
+}
+
+@media (max-width: 760px) {
+    .container {
+        width: 60%;
+	}
+	.buy{
+        width: 40%;
+	}
+    .headline {
+        width: 40%;
+    }
+    .information{
+        width: 60%;
+    }
+    .topText{
+        width: 70%;
+    }
+    .time{
+        display: none;
+    }
+    .button{
+        position: fixed;
+        right: 43%;
+    }
+    .conclusion{
+        width: 40%;
+    }
+    .orderButton {
+        width: 36%;
+    }
+    .types{
+        width: 90%;
+        flex-direction: column;
+    }
+}
+@media (max-width: 680px) {
+    .container {
+        width: 50%;
+	}
+	.buy{
+        width: 50%;
+	}
+    .headline {
+        width: 50%;
+    }
+    .information{
+        width: 50%;
+    }
+    .topText{
+        width: 55%;
+    }
+    .button{
+        position: fixed;
+        right: 51%;
+        top:42.5px;
+    }
+    .bottomText{
+        display: none;
+    }
+    .conclusion{
+        width: 50%;
+    }
+    .orderButton {
+        width: 46%;
+    }
+    .types{
+        width: 90%;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 530px) {
+    .page{
+        flex-direction: column;
+        min-width: 350px;
+    }
+    .container {
+        width: 100%;
+        position: relative;
+	}
+	.buy{
+        width: 100%;
+        position: relative;
+        top: 100px;
+        z-index: 4;
+	}
+    .headline{
+        width: 100%;
+        position: relative;
+        top: 0;
+        z-index: 4;
+    }
+    .mainLine{
+        top: 0;
+        z-index: 4;
+    }
+    .conclusion{
+        width: 100%;
+        position: relative;
+        top: 200px;
+        z-index: 4;
+    }
+    .orderButton{
+        width: 96%;
+        position: relative;
+        top: 150px;
+        left: 2%;
+        z-index: 4;
+    }
+    .information{
+        width: 100%;
+        z-index: 5;
+    }
+    .topText{
+        width: 80%;
+    }
+    .button{
+        position: relative;
+        left: -110px;
+    }
+}
+  
+  
+
+
+
+
 
